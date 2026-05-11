@@ -5,9 +5,7 @@ import { Header } from "@/components/Header";
 import { products } from "@/data/products";
 
 type Params = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateStaticParams() {
@@ -16,10 +14,9 @@ export async function generateStaticParams() {
   }));
 }
 
-export const dynamic = "force-static";
-
-export default function ProductPage({ params }: Params) {
-  const product = products.find((item) => item.slug === params.slug);
+export default async function ProductPage({ params }: Params) {
+  const { slug } = await params;
+  const product = products.find((item) => item.slug === slug);
 
   if (!product) {
     notFound();
