@@ -10,6 +10,14 @@ type Params = {
   };
 };
 
+export async function generateStaticParams() {
+  return products.map((product) => ({
+    slug: product.slug,
+  }));
+}
+
+export const dynamic = "force-static";
+
 export default function ProductPage({ params }: Params) {
   const product = products.find((item) => item.slug === params.slug);
 
