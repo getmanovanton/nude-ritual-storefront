@@ -10,22 +10,22 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="border-b border-[rgba(42,24,16,0.16)] bg-transparent px-6 py-6 print:hidden">
+    <header className="border-b border-vanilla/20 bg-chocolate px-6 py-0 print:hidden">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6">
         <Link href="/">
           <Image
-            src="/logo-chocolate.svg"
+            src="/logo-cream.svg"
             alt="Nude Ritual"
-            width={150}
-            height={40}
+            width={715}
+            height={400}
             priority
             unoptimized
-            className="h-8 w-auto md:h-10"
+            className="h-16 w-auto md:h-20"
           />
         </Link>
-        <nav className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.32em] font-medium font-sans text-chocolate/80">
+        <nav className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.32em] font-medium font-sans text-vanilla/80">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="transition-colors duration-200 hover:text-hazelnut">
+            <Link key={item.href} href={item.href} className="transition-colors duration-200 hover:text-vanilla">
               {item.label}
             </Link>
           ))}
