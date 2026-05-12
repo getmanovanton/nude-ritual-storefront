@@ -19,7 +19,7 @@ export function Header() {
             width={1024}
             height={1024}
             priority
-            className="h-16 w-auto md:h-20"
+            className="h-48 w-[260px] object-contain md:h-60 md:w-[320px]"
           />
         </Link>
         <nav className="flex flex-wrap gap-6 text-xs uppercase tracking-[0.32em] font-medium font-sans text-vanilla/80">
