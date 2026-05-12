@@ -14,12 +14,11 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6">
         <Link href="/">
           <Image
-            src="/logo-cream.svg"
+            src="/logo-cream.png"
             alt="Nude Ritual"
-            width={715}
-            height={400}
+            width={1024}
+            height={1024}
             priority
-            unoptimized
             className="h-16 w-auto md:h-20"
           />
         </Link>
